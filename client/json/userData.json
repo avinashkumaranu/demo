@@ -1,0 +1,22 @@
+{
+    "userData" : [
+        {
+            "id": 0,
+            "services": "Services of Mrs S Samni. This is some random dyanamic data from services section. It may have some services like data, phone, online",
+            "account": " Account of Mrs S Samni. This will contain account information. I understand that it may contain inner JSON structure again.",
+            "payment": "Payment section of Mrs S Samni. Notice the roadio group on the left and its color change. Its all done just using CSSs"
+        },
+        {
+            "id": 1,
+            "services": "Services of Rao. This is some random dyanamic data from services section. It may have some services like data, phone, online",
+            "account": "Account of Rao. This will contain account information. I understand that it may contain inner JSON structure again.",
+            "payment": "Payment of Rao. Payment section. Notice the roadio group on the left and its color change. Its all done just using CSSs"
+        },
+        {
+            "id": 2,
+            "services": "This is some random dyanamic data from services section. It may have some services like data, phone, online",
+            "account": "This will contain account information. I understand that it may contain inner JSON structure again.",
+            "payment": "Payment section. Notice the roadio group on the left and its color change. Its all done just using CSSs"
+        }
+    ]
+}

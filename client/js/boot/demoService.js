@@ -12,7 +12,7 @@
          // or server returns response with an error status.
          });*/
 
-        var svcUrl = "http://";
+        var svcUrl = "json/";
 
         
         var getService = function (callOptions) {

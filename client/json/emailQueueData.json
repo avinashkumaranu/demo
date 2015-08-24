@@ -1,0 +1,19 @@
+{
+    "emailQueueJson": [
+        {
+            "name": "Mrs S Samni",
+            "time": "4:30",
+            "userId":0
+        },
+        {
+            "name": "Mr A Rao",
+            "time": "2:30",
+            "userId":1
+        },
+        {
+            "name": "Mr Will Smith",
+            "time": "12:30",
+            "userId":2
+        }
+    ]
+}

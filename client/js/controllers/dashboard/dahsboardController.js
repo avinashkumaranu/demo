@@ -1,69 +1,53 @@
 (function () {
     var demoApp = angular.module("demoApp");
     var dashboardController = function ($scope, $window, demoService) {
-        $scope.callQueueJson = [
-            {
-                name : "Mr Will Smith",
-                time : "12:30",
-                services : "This is some random dyanamic data from services section. It may have some services like data, phone, online",
-                account : "This will contain account information. I understand that it may contain inner JSON structure again.",
-                payment : "Payment section. Notice the roadio group on the left and its color change. Its all done just using CSSs"
-            },
-            {
-                name : "Mr A Rao",
-                time : "2:30",
-                services : "Services of Rao. This is some random dyanamic data from services section. It may have some services like data, phone, online",
-                account : "Account of Rao. This will contain account information. I understand that it may contain inner JSON structure again.",
-                payment : "Payment of Rao. Payment section. Notice the roadio group on the left and its color change. Its all done just using CSSs"
-            },
-            {
-                name : "Mrs S Samni",
-                time : "4:30",
-                services : "Services of Mrs S Samni. This is some random dyanamic data from services section. It may have some services like data, phone, online",
-                account : " Account of Mrs S Samni. This will contain account information. I understand that it may contain inner JSON structure again.",
-                payment : "Payment section of Mrs S Samni. Notice the roadio group on the left and its color change. Its all done just using CSSs"
-            }
-        ];
+        $scope.callQueueJson = [];
         
-        $scope.emailQueueJson = [
-            {
-                name : "Mrs S Samni",
-                time : "4:30",
-                services : "Services of Mrs S Samni. This is some random dyanamic data from services section. It may have some services like data, phone, online",
-                account : " Account of Mrs S Samni. This will contain account information. I understand that it may contain inner JSON structure again.",
-                payment : "Payment section of Mrs S Samni. Notice the roadio group on the left and its color change. Its all done just using CSSs"
-            },
-            {
-                name : "Mr A Rao",
-                time : "2:30",
-                services : "Services of Rao. This is some random dyanamic data from services section. It may have some services like data, phone, online",
-                account : "Account of Rao. This will contain account information. I understand that it may contain inner JSON structure again.",
-                payment : "Payment of Rao. Payment section. Notice the roadio group on the left and its color change. Its all done just using CSSs"
-            },
-            {
-                name : "Mr Will Smith",
-                time : "12:30",
-                services : "This is some random dyanamic data from services section. It may have some services like data, phone, online",
-                account : "This will contain account information. I understand that it may contain inner JSON structure again.",
-                payment : "Payment section. Notice the roadio group on the left and its color change. Its all done just using CSSs"
-            }
-        ];
+        $scope.emailQueueJson = [];
         $scope.selectedUser = null;
         $scope.loadDetail =  function(val){
             $scope.selectedUser = {
-                name : $scope.callQueueJson[val].name,
-                services : $scope.callQueueJson[val].services,
-                account : $scope.callQueueJson[val].account,
-                payment : $scope.callQueueJson[val].payment
+                name : $scope.callQueueJson[val].name
             };
+            demoService.getService({
+                url : "userData.json",
+                successMethod : function(value){
+                    var userData = value.userData;
+                    for(var i=0; i<userData.length; i++){
+                        if($scope.callQueueJson[val].userId == userData[i].id){
+                            $scope.selectedUser.services = userData[i].services;
+                            $scope.selectedUser.account = userData[i].account;
+                            $scope.selectedUser.payment = userData[i].payment;
+                            
+                        }
+                    }
+                },
+                errorMethod : function(error) {
+                    console.error("Service error" + JSON.stringify(error));
+                }
+            });
         };
         $scope.loadDetailEmail =  function(val){
             $scope.selectedUser = {
-                name : $scope.emailQueueJson[val].name,
-                services : $scope.emailQueueJson[val].services,
-                account : $scope.emailQueueJson[val].account,
-                payment : $scope.emailQueueJson[val].payment
+                name : $scope.emailQueueJson[val].name
             };
+            demoService.getService({
+                url : "userData.json",
+                successMethod : function(value){
+                    var userData = value.userData;
+                    for(var i=0; i<userData.length; i++){
+                        if($scope.emailQueueJson[val].userId == userData[i].id){
+                            $scope.selectedUser.services = userData[i].services;
+                            $scope.selectedUser.account = userData[i].account;
+                            $scope.selectedUser.payment = userData[i].payment;
+                            
+                        }
+                    }
+                },
+                errorMethod : function(error) {
+                    console.error("Service error" + JSON.stringify(error));
+                }
+            });
         };
         $scope.newValue = function(val) {
             alert(val);
@@ -73,6 +57,24 @@
             $scope.title = "";
             $scope.summary = "";
         };
+        demoService.getService({
+            url : "emailQueueData.json",
+            successMethod : function(value){
+                $scope.emailQueueJson = value.emailQueueJson;
+            },
+            errorMethod : function(error) {
+                console.error("Service error" + JSON.stringify(error));
+            }
+        });
+        demoService.getService({
+            url : "callQueueData.json",
+            successMethod : function(value){
+                $scope.callQueueJson = value.callQueueJson;
+            },
+            errorMethod : function(error) {
+                console.error("Service error" + JSON.stringify(error));
+            }
+        });
     };
     demoApp.controller('dashboardController', ['$scope', '$window','demoService', dashboardController]);
 })();
