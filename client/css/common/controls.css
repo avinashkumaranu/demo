@@ -1,0 +1,129 @@
+body {
+    background-color: #F0F0F0;
+}
+.contentDiv {
+    left: 2vw;
+    top: 5vw;
+    width: 96vw;
+    position: relative;
+    float: left;
+/*    background-color: darkseagreen;*/
+}
+.navBarPosition {
+    left: 2vw;
+}
+.callQueuePosition {
+/*    background-color: aqua;*/
+}
+.emailQueuePosition {
+/*    background-color:aquamarine;*/
+}
+.boxShadowStyle {
+    box-shadow: 5px 5px 5px grey;
+    border-width: 2px;
+    border-color: black;
+}
+.headerContainer {
+    margin: 0;
+    text-align: center;
+    background-color: cadetblue;
+    
+    height: 12vh;
+    position: relative;
+}
+table {
+    width: 100%;
+}
+.headerContent {
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
+    position: absolute;
+    top: 2vw;
+    font-weight: bold;
+    color: white;
+}
+th {
+    background-color: gray;
+    color: white;
+    padding: 1vh;
+    height: 4vh;
+}
+td{
+text-align: center;
+}
+.tdName {
+    width: 70%;
+}
+.tdTime {
+    width: 30%;
+}
+.rowItem {
+    height: 4vh;
+    
+}
+
+.userDetailPosition {
+}
+.userCurrentIssue {
+   
+    position: relative;
+}
+
+.detailOptions {
+    list-style-type: none;
+    width: 33%;
+    float: left;
+    margin: 0;
+}
+.detailOptions input[type="radio"] {
+   display: none;
+}
+
+.detailOptions input[type="radio"]:checked + label {
+    background:gray;
+    color: white;
+}
+.li {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    height: 4vh;
+}
+label {
+    font-size: inherit;
+    margin: 0;
+    height: 6vh;
+    text-align: center;
+}
+.detailsDiv {
+    float: left;
+    width: 66%;
+    background-color: bisque;
+}
+.titleTextBox {
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 14vh;
+    height: 4vh;
+}
+.textAreaDetails {
+    position: absolute;
+    left: 10%;
+    top: 21vh;
+    height: 13vh;
+    width: 80%;
+}
+.saveButton {
+    position: absolute;
+    margin: auto;
+    left: 35%;
+    width: 30%;
+    top: 39vh;
+}
+.cards {
+     width: 44vw;
+    float: left;
+    margin: 2vw;
+}

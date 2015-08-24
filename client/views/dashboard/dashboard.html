@@ -1,0 +1,78 @@
+<div ng-init="dashInit">
+<!--
+    <div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:true}">{{list1.title}}</div>
+   <div data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable="{multiple:false}" style='height:50px;'>
+  <div class="btn btn-success" data-drag="false" data-jqyoui-options ng-model="list2" jqyoui-draggable></div>
+</div>
+-->
+    <div class="callQueuePosition boxShadowStyle cards" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" jqyoui-draggable="{animate:true}">
+        
+        <div class="headerContainer">
+            <div class="headerContent">Call Queue</div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Call-Time</th>
+                </tr>
+            </thead>
+            <tr ng-repeat="item in callQueueJson" class="rowItem" ng-click="loadDetail($index)">
+                <td class="tdName">{{item.name}}</td>
+                <td class="tdName">{{item.time}}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="emailQueuePosition boxShadowStyle cards">
+        <div class="headerContainer">
+            <div class="headerContent">Email Queue</div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tr ng-repeat="item in emailQueueJson"  class="rowItem" ng-click="loadDetailEmail($index)">
+                <td  class="tdName">{{item.name}}</td>
+                <td  class="tdName">{{item.time}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="userDetailPosition boxShadowStyle cards" ng-hide="selectedUser == null">
+        <div class="headerContainer">
+            <div class="headerContent">{{selectedUser.name}}</div>
+        </div>
+        <ul class="detailOptions">
+            <li>
+                <input type="radio" id="radioServices" name="amount" value="services" ng-model="tab"/>
+                <label for="radioServices">Services</label>
+            </li>
+            <li>
+                <input type="radio" id="raioAccount" name="amount" value="account" ng-model="tab"/>
+                <label for="raioAccount">Account</label>
+            </li>
+            <li>
+                <input type="radio" id="radioPayment" name="amount" value="payment" ng-model="tab"/>
+                <label for="radioPayment">Payment</label>
+            </li>
+        </ul>
+        <div class="detailsDiv">
+            <div ng-show="tab == 'services'">{{selectedUser.services}}</div>
+            <div ng-show="tab == 'account'">{{selectedUser.account}}</div>
+            <div ng-show="tab == 'payment'">{{selectedUser.payment}}</div>
+            
+        </div>
+    </div>
+    
+    <div class="userCurrentIssue boxShadowStyle cards" ng-hide="selectedUser == null">
+        <div class="headerContainer">
+            <div class="headerContent">Current Issue</div>
+        </div>
+        <input type="text" class="titleTextBox" placeholder="Title" ng-model="title">
+        <textarea class="textAreaDetails" placeholder="Summary" ng-model="summary"></textarea>
+        <button class="btn btn-primary saveButton" ng-click="saveIssue()">Save</button>
+    </div>
+</div>

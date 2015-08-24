@@ -1,0 +1,16 @@
+/* Apple iPads */
+/* Landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* Generic Controls - Starts */
+    body, div, input, button, textarea {
+        font-size: 3vw;
+        font-family: helveticaNeueThin, Helvetica, Arial, sans-serif;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent; /* For some Androids */
+    }
+}
+
+/* Portrait */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+}

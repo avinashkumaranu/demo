@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="lib/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.js"></script>
+        <script type="text/javascript" src="lib/js/angular/angular.min.js"></script>
+        <script type="text/javascript" src="lib/js/angular/angular-route.min.js"></script>
+        <script type="text/javascript" src="lib/js/angular-dragdrop.min.js"></script>
+        <script type="text/javascript" src="js/boot/demoApp.js"></script>
+        <script type="text/javascript" src="js/boot/demoRoute.js"></script>
+        <script type="text/javascript" src="js/boot/demoService.js"></script>
+        <script type="text/javascript" src="js/boot/demoContext.js"></script>
+        <script type="text/javascript" src="js/services/commonServices.js"></script>
+        <script type="text/javascript" src="js/filters/dateFormat.js"></script>
+        <script type="text/javascript" src="js/directives/textboxDirective.js"></script>
+        <script type="text/javascript" src="js/boot/demoAppCtrl.js"></script>
+        <script type="text/javascript" src="js/controllers/dashboard/dahsboardController.js"></script>
+        <script type="text/javascript" src="js/controllers/navbarController.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css">
+        <link href="css/smartphones/style_ldpi.css" rel="stylesheet" type="text/css"/>
+        <link href="css/smartphones/style_smartphones.css" rel="stylesheet" type="text/css"/>
+        <link href="css/smartphones/style_mdpi.css" rel="stylesheet" type="text/css"/>
+        <link href="css/smartphones/style_hdpi.css" rel="stylesheet" type="text/css"/>
+        <link href="css/smartphones/style_xhdpi.css" rel="stylesheet" type="text/css"/>
+        <link href="css/smartphones/style_xxhdpi.css" rel="stylesheet" type="text/css"/>
+        <link href="css/apple/style_iPhone4.css" rel="stylesheet" type="text/css"/>
+        <link href="css/apple/style_iPhone5.css" rel="stylesheet" type="text/css"/>
+        <link href="css/apple/style_iPhone6.css" rel="stylesheet" type="text/css"/>
+        <link href="css/apple/style_iPhone6plus.css" rel="stylesheet" type="text/css"/>
+        <link href="css/tablets/style_tablet_mini.css" rel="stylesheet" type="text/css"/>
+        <link href="css/tablets/style_tablet.css" rel="stylesheet" type="text/css"/>
+        <link href="css/tablets/style_tablet_hd.css" rel="stylesheet" type="text/css"/>
+        <link href="css/desktop/style_desktop_large.css" rel="stylesheet" type="text/css"/>
+        <link href="css/desktop/style_desktop_normal.css" rel="stylesheet" type="text/css"/>
+        <link href="css/common/animation.css" rel="stylesheet" type="text/css"/>
+        <link href="css/common/common.css" rel="stylesheet" type="text/css"/>
+        <link href="css/common/controls.css" rel="stylesheet" type="text/css"/>
+        <title></title>
+    </head>
+    <body ng-app="demoApp" ng-controller="demoAppCtrl">
+        <div ng-controller="navCtrl">
+            <div class="navbar">
+                <div class="navBarPosition">
+                    <ul class="nav navbar-nav" style="left:2vw;">
+                        <li ng-class="navClass('dashboard')"><a href='' ng-click="loadDashboard()">Dashboard</a></li>
+                        <li ng-class="navClass('schedule')"><a href='' ng-click="loadSchedule()">Schedule</a></li>
+                        <li ng-class="navClass('profile')"><a href='' ng-click="loadProfile()">Profile</a></li>
+                        <li ng-class="navClass('support')"><a href='' ng-click="loadSupport()">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div ng-view class="contentDiv"></div>
+        </div>
+    	
+    </body>
+</html>

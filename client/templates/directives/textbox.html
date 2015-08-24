@@ -1,0 +1,12 @@
+<div class="{{containerClass}} ZIndexControlStyle" ng-if="isReadOnly == 'true'">
+    <input readonly id="text{{id}}" type="{{type}}" class="{{textboxClass}} ZIndexControl" ng-model="$parent.textboxValue" autocapitalize="off" autocorrect="off"/>    
+    <div id="textClear{{id}}" class="{{iconClass}} ZIndexControlIcons"></div>
+    <div id="textHeader{{id}}" class="{{headerClass}} PickerHeaderFont ZIndexControlIcons">{{placeholder}}</div>
+</div>
+
+<div class="{{containerClass}} ZIndexControlStyle" ng-if="isReadOnly == 'false'">
+    <input ng-keydown="onKeyDown()" ng-focus="focusText()" ng-blur="blurText()" id="text{{id}}" type="{{type}}" class="{{textboxClass}} ZIndexControl" ng-model="$parent.textboxValue" autocapitalize="{{autocapitalize}}" autocorrect="off" pattern="{{pattern}}" maxlength="{{maxlength}}"/>
+    <div id="textClear{{id}}" ng-click="textClear()" class="{{iconClass}} ZIndexControlIcons"></div>
+    <div id="textHeader{{id}}" class="{{headerClass}} PickerHeaderFont ZIndexControlIcons">{{placeholder}}</div>
+<!--    ng-class="{ControlTextboxHeaderInvalid : isInvalid, ControlTextboxHeaderalid : !isInvalid}"-->
+</div>

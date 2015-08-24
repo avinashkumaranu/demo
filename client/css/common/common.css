@@ -1,0 +1,339 @@
+@font-face {
+    font-family: helveticaNeueThin;
+    src: url(../../res/fonts/HelveticaNeue-Thin.otf);
+}
+.imageSize {
+    width: 100%;
+    height: 90vh;
+}
+body {
+    font-family: helveticaNeueThin, Helvetica, Arial, sans-serif;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+input {
+    font-family: helveticaNeueThin, Helvetica, Arial, sans-serif;
+    color: #3E4245;
+}
+textarea {
+    font-family: helveticaNeueThin, Helvetica, Arial, sans-serif;
+    color: #3E4245;
+    resize: none;
+}
+br {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.height100vh {
+    height: 100vh;
+}
+.EllipseLeft {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.EllipseCenter {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/*Z Index for All Controls*/
+.ZIndexBackBlur {
+    z-index: -1;
+}
+.ZIndexBackground {
+    z-index: 0;
+}
+.ZIndexBackgroundBlur {
+    z-index: 1;
+}
+.ZIndexBackgroundItems {
+    z-index: 2;
+}
+.ZIndexControlPosition {
+    z-index: 3;
+}
+.ZIndexControlStyle {
+    z-index: 4;
+}
+.ZIndexControl {
+    z-index: 5;
+}
+.ZIndexControlIcons {
+    z-index: 6;
+}
+.ZIndexControlHeader {
+    z-index: 7;
+}
+.ZIndexControlOptions {
+    z-index: 8;
+}
+.ZIndexControlOverlay {
+    z-index: 9;
+}
+.ZIndexControlOverlayOptions {
+    z-index: 10;
+}
+.ZIndexControlOverlayHeader {
+    z-index: 11;
+}
+.ZIndexControlOverlayItems {
+    z-index: 12;
+}
+.ZIndexControlOverlayControl {
+    z-index: 12;
+}
+.ZIndexControlOverlayIcons {
+    z-index: 13;
+}
+.ZIndexControlOverlayLevel2 {
+    z-index: 14;
+}
+.ZIndexControlOverlayOptionsLevel2 {
+    z-index: 15;
+}
+.ZIndexControlOverlayHeaderLevel2 {
+    z-index: 16;
+}
+.ZIndexControlOverlayItemsLevel2 {
+    z-index: 17;
+}
+.ZIndexControlOverlayControlLevel2 {
+    z-index: 17;
+}
+.ZIndexControlOverlayIconsLevel2 {
+    z-index: 18;
+}
+.ZIndexShowImage {
+    z-index: 100000;
+}
+.ZIndexShowImageIcon {
+    z-index: 100001;
+}
+.CursorPointer {
+    cursor: pointer;
+}
+.PositionAbsolute {
+    position: absolute;
+}
+.PositionRelative {
+    position: relative;
+}
+.PositionFixed {
+    position: fixed;
+}
+
+.HideItem {
+    display: none;
+}
+.HideItemNotImp {
+    display: none !important;
+}
+.ShowItem {
+    display: block;
+}
+.HideVisItem {
+    display: none;
+    visibility: hidden;
+}
+.HideVisItemNotImp {
+    display: none !important;
+    visibility: hidden !important;
+}
+.ShowVisItem {
+    display: block;
+    visibility: visible;
+}
+
+.overflowYScroll {
+    overflow-y: scroll;
+}
+.overflowYAuto {
+    overflow-y: auto;
+}
+.overflowYHidden {
+    overflow-y: hidden;
+    position: fixed;
+}
+.overflowHidden {
+    overflow: hidden;
+}
+.overflowYFixed {
+    position: fixed;
+}
+.overflowXHidden {
+    overflow-x: hidden;
+}
+
+.MarginPaddingZero {
+    padding: 0;
+    margin: 0;
+}
+
+/* Floaters */
+.FloatLeft {
+    float: left;
+}
+.FloatRight {
+    float: right;
+}
+
+/* Textbox Styles */ 
+input[type="text"] {
+    font-family: helveticaNeueThin, Helvetica, Arial, sans-serif;
+}
+
+.TextStyle::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #3E4245;
+}
+.TextStyle:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #3E4245;
+    opacity:  1;
+}
+.TextStyle::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #3E4245;
+    opacity:  1;
+}
+.TextStyle:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #3E4245;
+}
+.TextStyle:focus {
+    outline: none;
+}
+
+.canvasStyle {
+    border-bottom: 1px solid rgba(0,0,0,0.3); 
+    background-color: #FFF;
+    box-shadow: 0 9px 20px -5px rgba(0,0,0,0.8);
+}
+
+/* ng-show and ng-hide */ 
+.view-show {
+    transition: all 0.5s ease;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    display: block;
+}
+.view-show.ng-hide {
+    transition: all 0.5s ease;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    display: none !important;
+}
+.view-show.ng-hide-add {
+    transition: all 0.5s ease;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    display: none !important;
+}
+.view-show.ng-hide-remove {
+    transition: all 1s ease;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    display: block;
+}
+
+.col-wd-1 {
+    width: 600px;
+    height: 300px;
+}
+/*Start style for blur */
+.stretch {
+    width:105%;
+    height:105%;
+}
+
+.backgroundImageBlur {
+    width: 100%;
+    height: 100%; 
+    position: fixed; 
+    margin: 0px;
+    padding : 0px;
+    left: 0px; 
+    top: 0px; 
+}
+.backgroundImage {
+    width: 110%; 
+    height: 105%; 
+    position: fixed; 
+    margin: -5% 0px 0px -5%;
+    padding: 0px -5% -5% 0px;
+    left: 0px; 
+    top: 0px;
+}
+.backgroundImageMenu {
+    width: 100%;
+    height: 100%; 
+    position: fixed; 
+    margin: 0px;
+    padding : 0px;
+    left: 0px; 
+    top: 0px;
+}
+/*End style for blur */
+/*Start style for header directive */
+.HeaderDiv {
+    color: #f0f0f0;
+    background-color: #476480;
+}
+
+.IconClass{
+    background-color: transparent;
+}
+.RightIconClass{
+    background-color: transparent;
+}
+.HeaderClass{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.MainHeaderClass{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.SubHeaderClass{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*End style for header directive */
+* {
+    /* prevent callout when holding tap on links (the native dialog that comes up) */
+    -webkit-touch-callout: none;
+
+    /* prevent webkit from resizing text to fit */
+    -webkit-text-size-adjust: none;
+
+    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    -webkit-user-select: none;
+}
+input {
+    -webkit-user-select: text;
+}
+textarea {
+    -webkit-user-select: text;
+}
+input[type="checkbox"] { -webkit-appearance: none; }
+
+input::-webkit-input-placeholder { opacity: .8; }
+
+/*temparory fix*/
+.ngdialog-overlay {
+    z-index: -1;
+}

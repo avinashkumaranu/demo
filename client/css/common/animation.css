@@ -1,0 +1,45 @@
+/* View Slide */ 
+.view-slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.view-slide.ng-enter,
+.view-slide.ng-leave {
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+.view-slide.ng-enter {
+    left: 100%;
+}
+.view-slide.ng-enter-active {
+    left: 0;
+}
+.view-slide.ng-leave {
+    left: 0;
+}
+.view-slide.ng-leave-active {
+    left: -100%;
+}
+.cssFadeOut {
+	-webkit-transition: opacity .25s;
+	transition: opacity .25s;
+}
+.cssFadeOut.ng-hide {
+	opacity:0;
+}
+menu .cssSlideUp {
+    transition: .25s linear all;
+    overflow: hidden;
+}
+
+.KeyboardTransitionAnimate {
+	-webkit-transition: padding-bottom .25s ease;
+    -moz-transition: padding-bottom .25s ease;
+    -o-transition: padding-bottom .25s ease;
+    transition: padding-bottom .25s ease;
+}
